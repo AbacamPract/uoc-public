@@ -38,12 +38,15 @@ const Cartogram = () => {
   const [selectedProduct, setSelectedProduct] = useState("");
 
   useEffect(() => {
-    d3.json('/src/assets/data/cartogram_price_increase_iran_war_2026.json').then(topoData => {
+    // CAMBIO TÉCNICO: Ruta compatible con GitHub Pages y Vite
+    const jsonPath = `${import.meta.env.BASE_URL}data/cartogram_price_increase_iran_war_2026.json`;
+    
+    d3.json(jsonPath).then(topoData => {
       const geojson = topojson.feature(topoData, topoData.objects.provinces);
       setData(geojson);
       const firstProv = geojson.features.find(f => f.properties.datos_gasolina);
       if (firstProv) setSelectedProduct(Object.keys(firstProv.properties.datos_gasolina)[0]);
-    });
+    }).catch(err => console.error("Error al cargar datos:", err));
   }, []);
 
   const projection = useMemo(() => (data ? getProjection(data) : null), [data]);

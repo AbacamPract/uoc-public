@@ -26,3 +26,12 @@ dist-ssr
 __pycache__/
 *.pyc
 .env
+# Cache de Vite
+.vite/
+
+# Entorno de Python (que ya tenías)
+.venv/
+
+# Dependencias de Node (por si acaso)
+node_modules/
+dist/

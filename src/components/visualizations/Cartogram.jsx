@@ -75,7 +75,7 @@ const Cartogram = () => {
             <li><strong>Qué se representa: </strong>Representa el incremento en los precios del combustible, desde el primer día de la guerra de EEUU, Israel e Irán.</li>
             <li><strong>Qué demuestra: </strong>Que los precios han aumentado significativamente en diferentes provincias.</li>
             <li><strong>Descubrimiento buscado: Qué provincias tienen mayores incrementos en los precios del combustible a día de hoy?</strong></li>
-            <li><strong>Explicación de porqué esta técnica consigue el objetivo:</strong> 
+            <li><strong>Explicación de por qué esta técnica consigue el objetivo:</strong> 
                 <ul>
                     <li>En el cartograma representamos el incremento de precios comparando el día de hoy con el 28/02/2026.</li>
                     <li>Con el mapa de dorling, el usuario reconoce el país y puede extraer patrones en el comportamiento del precio. </li>

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>Visualización de Datos - PEC2</h1>
-      
+      <div>Alumno: Andrés Ballester Camús</div>
       <VisualizationSection title="Cartograma" text={cartogramText} visualization="cartogram" />
 
       <VisualizationSection title="Boxplot" text={boxplotText} visualization="boxplot" />

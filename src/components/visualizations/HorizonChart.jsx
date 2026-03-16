@@ -136,7 +136,7 @@ const HorizonChart = () => {
                 <li><strong>Qué se representa:</strong> Evolución de los precios de los combustibles.</li>
                 <li><strong>Qué demuestra:</strong> La evolución de precio desde principio de año.</li>
                 <li><strong>Descubrimiento buscado: ¿Cómo se han comportado los precios de los combustibles desde principios de año?</strong></li>
-                <li><strong>Explicación de porqué esta técnica consigue el objetivo:</strong>
+                <li><strong>Explicación de por qué esta técnica consigue el objetivo:</strong>
                     <ul>
                         <li>Permite comparar múltiples series temporales en un espacio compacto.</li>
                         <li>Resalta las tendencias y patrones de volatilidad a lo largo del tiempo.</li>

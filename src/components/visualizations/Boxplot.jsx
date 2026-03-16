@@ -156,7 +156,7 @@ const Boxplot = ({ width, height }) => {
             <li><strong>Qué se representa:</strong> Visión general de la distribución de los precios del combustible.</li>
             <li><strong>Qué demuestra:</strong> Que los combustibles tienen distintos precios y que tienen distintos comportamiento.</li>
             <li><strong>Descubrimiento buscado: ¿Los combustibles se comportan igual?</strong> </li>
-            <li><strong>Explicación de porqué esta técnica consigue el objetivo:</strong> 
+            <li><strong>Explicación de por qué esta técnica consigue el objetivo:</strong> 
                 <ul>
                     <li>La altura de las cajas, el largo de los bigotes y los outliers muestran la variabilidad de los precios. </li>
                     <li>Los gasoleos tienen una variabilidad mayor que las gasolinas, y que el gasoleo premium es el que más variabilidad tiene.</li>

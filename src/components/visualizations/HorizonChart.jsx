@@ -48,7 +48,7 @@ const HorizonChart = () => {
         if (!filteredData.length) return;
 
         const chartWidth = 1000;
-        const chartHeight = 50;
+        const chartHeight = 120;
 
         const container = d3.select(chartRef.current);
 

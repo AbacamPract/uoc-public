@@ -22,10 +22,17 @@ const Boxplot = ({ width, height }) => {
       const whiskerMin = d3.min(values.filter((d) => d >= min));
       const whiskerMax = d3.max(values.filter((d) => d <= max));
 
+      // Creamos la nube de puntos con un offset aleatorio (Jitter) para evitar solapamientos
+      const points = values.map((val) => ({
+        value: val,
+        jitterOffset: (Math.random() - 0.5) * 0.5 // Distribuidos en el 50% del ancho de la caja
+      }));
+
       return {
         x: group.x,
         stats: { q1, median, q3, whiskerMin, whiskerMax },
         outliers,
+        points,
       };
     });
   }, []);
@@ -134,15 +141,27 @@ const Boxplot = ({ width, height }) => {
           strokeWidth={2}
         />
 
-        {/* Outliers */}
-        {d.outliers.map((outlier, j) => (
+        {/* Nube de puntos (Todos los datos con Jitter) */}
+        {d.points.map((pt, j) => (
           <circle
             key={j}
+            cx={boxX + boxWidth / 2 + pt.jitterOffset * boxWidth}
+            cy={yScale(pt.value)}
+            r={1.5}
+            fill="#a0aec0"
+            fillOpacity={0.15}
+          />
+        ))}
+
+        {/* Valores Extremos (Outliers) */}
+        {d.outliers.map((outlier, j) => (
+          <circle
+            key={`outlier-${j}`}
             cx={boxX + boxWidth / 2}
             cy={yScale(outlier)}
             r={3}
             fill="#5f5e5e"
-            fillOpacity={0.6}
+            fillOpacity={0.8}
           />
         ))}
       </g>
@@ -151,7 +170,7 @@ const Boxplot = ({ width, height }) => {
 
   return (
     <div style={{ fontFamily: 'sans-serif', position: 'relative' }}>
-      <h3><strong>Visualización: Distribución del combustible en España desde enero de 2026</strong></h3> 
+      <h3><strong>Visualización: Distribución del PVP del combustible en España desde enero de 2026</strong></h3> 
         <ul>
             <li><strong>Qué se representa:</strong> Visión general de la distribución de los precios del combustible.</li>
             <li><strong>Qué demuestra:</strong> Que los combustibles tienen distintos precios y que tienen distintos comportamiento.</li>
@@ -160,6 +179,7 @@ const Boxplot = ({ width, height }) => {
                 <ul>
                     <li>La altura de las cajas, el largo de los bigotes y los outliers muestran la variabilidad de los precios. </li>
                     <li>Los gasoleos tienen una variabilidad mayor que las gasolinas, y que el gasoleo premium es el que más variabilidad tiene.</li>
+                    <li>La nueve de puntos nos ayuda ha entender como se distribuyen los datos.</li>
                 </ul>
             </li>
             <li><strong>Fuente de datos:</strong> <a href="https://catalogodatos.cnmc.es/dataset/ds_14042_1/resource/e63f5db2-0433-4b72-8647-e5a4c74f1876" target="_blank">CNMC Data</a></li>

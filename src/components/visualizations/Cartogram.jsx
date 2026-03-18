@@ -70,7 +70,7 @@ const Cartogram = () => {
 
   return (
     <div style={{ fontFamily: 'sans-serif', position: 'relative' }}>
-      <h3><strong>Visualización: Incremento PVP por Provincia desde el 28 de febrero de 2026 (inicio guerra contra Irán)</strong></h3> 
+      <h3><strong>Visualización: Incremento PVP del precio de la gasolina por Provincia desde el 28 de febrero de 2026 (inicio guerra contra Irán)</strong></h3> 
         <ul>
             <li><strong>Qué se representa: </strong>Representa el incremento en los precios del combustible, desde el primer día de la guerra de EEUU, Israel e Irán.</li>
             <li><strong>Qué demuestra: </strong>Que los precios han aumentado significativamente en diferentes provincias.</li>
@@ -78,7 +78,7 @@ const Cartogram = () => {
             <li><strong>Explicación de por qué esta técnica consigue el objetivo:</strong> 
                 <ul>
                     <li>En el cartograma representamos el incremento de precios comparando el día de hoy con el 28/02/2026.</li>
-                    <li>Con el mapa de dorling, el usuario reconoce el país y puede extraer patrones en el comportamiento del precio. </li>
+                    <li>Con el mapa de dorling, el usuario reconoce el país, el área es proporcional al valor de los datos que se visualizan geográficamente y los círculos se ubican aproximadamente en sus correspondientes posiciones geográficas.</li>
                     <li>El tamaño y el color de cada burbuja está en función del incremento que ha sufrido el combustible desde la fecha de inicio de la guerra.</li>
                     <li>Permite cambiar de combustible.</li>
                     <li>Tiene etiquetas que te permiten ver los valores exactos.</li>

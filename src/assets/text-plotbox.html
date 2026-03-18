@@ -9,19 +9,20 @@
 
     <section>
         <h3>Descripción</h3> 
-        <p>Muestra la distribución de datos de una variable continua. Destaca tendencias centrales e identificar valores atípicos </p>
+        <p>Resume la distribución de una variable numérica en uno o más grupos. Destaca tendencias centrales e identificar valores atípicos </p>
     </section>
 
     <section>
         <h3>Origen</h3> 
-        <p>Fue creado por el matemático estadounidense John Tukey y presentado en su libro " Exploratory Data Analysis " en 1977 </p>
+        <p>Fue creado por el matemático estadounidense John Tukey y presentado en su libro " Exploratory Data Analysis " en 1977. </p>
     </section>
 
     <section>
         <h3>Funcionamiento</h3> 
         <ul>
             <li>La marca central indica la mediana (percentil 50). </li>
-            <li>Los extremos inferior y superior de la caja indican los percentiles 25 y 75, respectivamente. </li>
+            <li>Los extremos inferior y superior de la caja indican los percentiles 25 y 75, respectivamente.</li>
+            <li>La caja nos indica el rango intercuartil (RIC).</li>
             <li>Los bigotes se extienden hasta los puntos de datos más extremos que no se consideran valores atípicos. </li>
             <li>Los valores atípicos se representan individualmente </li>
         </ul>
@@ -37,25 +38,24 @@
 
     <section>
         <h3>Tipo y estructura de datos</h3> 
-        <p>Se permiten todos los tipos de datos numéricos. </p>
-        <p>Las estructuras de datos permitidas son Serie de datos, Matriz de datos, Señal, Serie de señales y Lista. </p>
+        <p>Una o más variables numéricas.</p>
+        <p>También puede ir con variable categóricas como elemento distintivo entre grupos.</p>
     </section>
 
     <section>
         <h3>Limitaciones</h3> 
+        <p>Puede conllevar la pérdida de información importante. Distribuciones diferentes pueden mostrar el mismo boxplot (Paradoja de Stein). Para resolverlo:</p>
         <ul>
-            <li>Distribuciones diferentes pueden mostrar el mismo boxplot (Paradoja de Stein).</li>
-            <li>El efecto de la moda: El boxplot no expresa bien la información en distribuciones bimodales o multimodales.</li>
-            <li>La forma de un diagrama de caja es rectangular, por lo que puede confundirnos y hacernos creer que hay datos dentro del rango intercuartil. Si hay huecos o no hay datos en el rango intercuartil, es posible que no se detecten.</li>
+            <li><strong>Si el conjunto de datos no es muy grande</strong>, se podría añadir la nube de puntos.</li>
+            <li><strong>Si el conjunto de datos es grande</strong>, se puede superponer un diagrama de violín, que ilustra la distribución.</li>
         </ul>
     </section>
 
     <section>
         <h3>Fuentes</h3> 
         <ul>
-            <li><a href="https://en.wikipedia.org/wiki/Box_plot " target="_blank">Wikipedia. Box plot</a></li>
-            <li><a href="https://towardsdatascience.com/why-a-box-plot-should-not-be-used-alone-and-some-plots-to-use-it-with-23381f7e3cb6/" target="_blank">Why a Box Plot Should Not be Used Alone and 3 Plots to Use with</a></li>
-        </ul>
+            <li><a href="https://www.data-to-viz.com/caveat/boxplot.html" target="_blank">The Boxplot and its pitfalls</a></li>
+            
     </section>
 </body>
 </html>
